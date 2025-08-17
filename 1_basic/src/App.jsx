@@ -1,12 +1,20 @@
 import { useState } from 'react'
+import Chai from './chai'
 
-function App() {
-  const [count, setCount] = useState(0)
-  
+function App() {  
   return (
-    <>
-      <h1>hello Duniya</h1>
-    </>
+    /* <Chai/>
+       <h1>chai and react</h1>
+       <p>test para</p>
+    */
+    // we can only import one element
+    // so to takle this problem we can take a div or <>
+    // <> --> called fragment
+    <div>
+      <Chai/>
+      <h1>chai and react</h1>
+      <p>test para</p>
+    </div>
   )
 }
 
