@@ -8,9 +8,21 @@ function App() {
   let [counter, setCounter] = useState(15)
   // this(hooks) help to change counter variable in whole web-page where counter is displaying
 
+
   const addValue = () =>{
     //counter = counter+1;
-    setCounter(counter+1)
+    /* 
+      setCounter(counter+1)
+      -->  (if we use multiple setcounter but after one click only one value will change)
+      -->  (bcoz usestate send update to UI and variable in form of batches)
+      setCounter(counter+1)
+      setCounter(counter+1)
+    */
+    // if we want to update 3 on one click then
+    setCounter(prevCounter => prevCounter+1)
+    setCounter(prevCounter => prevCounter+1)
+    setCounter(prevCounter => prevCounter+1)
+    
   }
   const removevalue = () =>{
     setCounter(counter-1)
